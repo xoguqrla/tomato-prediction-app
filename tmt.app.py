@@ -87,8 +87,8 @@ def main():
     st.title("토마토 생육 예측 시스템")
     st.write("생육 데이터를 입력하여 개화군과 착과군을 예측하고, 모델 성능을 평가합니다.")
 
-    # 파일 경로 설정
-    file_path = r"C:\Users\k7202\OneDrive\바탕 화면\완숙토마토_생육_데이터.csv"
+    # 파일 경로 설정 (프로젝트 루트 디렉토리 기준)
+    file_path = "완숙토마토_생육_데이터.csv"
 
     # 데이터 로드
     data = load_and_prepare_data(file_path)
