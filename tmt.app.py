@@ -97,8 +97,8 @@ def main():
         st.write("생육 데이터를 입력하여 개화군과 착과군을 예측하고, 모델 성능을 평가합니다.")
 
         # 생육 데이터 경로
-        file_path = r"C:\Users\k7202\OneDrive\바탕 화면\tomato-prediction-app\완숙토마토_생육_데이터.csv"
-        data = load_and_prepare_data(file_path)
+        file_path_biology = "./완숙토마토_생육_데이터.csv"
+        data = load_and_prepare_data(file_path_biology)
 
         if data is not None:
             bloom_model, fruit_model = train_models(data)
@@ -106,8 +106,8 @@ def main():
 
     elif page == "환경 데이터 분석":
         st.title("환경 데이터 분석")
-        file_path = r"C:\Users\k7202\OneDrive\바탕 화면\tomato-prediction-app\토마토_환경데이터_익산_1구역(1월~11월).csv"
-        data, numeric_data = load_and_process_data(file_path)
+        file_path_environment = "./토마토_환경데이터_익산_1구역(1월~11월).csv"
+        data, numeric_data = load_and_process_data(file_path_environment)
 
         if data is not None:
             st.write("환경 데이터 미리보기:")
@@ -121,3 +121,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
